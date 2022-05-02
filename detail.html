@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)file:///C:/Users/USER/Downloads/index.html -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+
+    <link rel="stylesheet" href="resources/css/fonts.css">
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/common.css">
+    <link rel="stylesheet" href="resources/css/main.css">
+
+    <script src="resources/js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#name').click(function () {
+                $('.logout').toggle();
+            });
+            $('.btn-del-comment').click(function(e){
+                e.stopPropagation();
+                $('.mask').toggle();
+                $('#modalDelComment').toggle();
+            });
+            $('.dot').click(function (e) {
+                e.stopPropagation();
+                $('.mask').toggle();
+                $('#modalDel').toggle();
+            });
+            $(document).click(function () {
+                $('.mask').hide();
+                $('#modalDel').hide();
+                $('#modalDelComment').hide();
+
+            });
+            $('.ico-like').click(function(){
+                $('.ico-like').toggleClass('active');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- wrap -->
+    <div class="wrap">
+        <!-- header -->
+        <header>
+            <div class="layout">
+                <img src="resources/images/logo.png">
+
+                <div class="right-group">
+                    <a href="create.html"><img src="resources/images/ico-link.png" style="margin-right: 15px;"></a>
+                    <div class="profile-img"><img src="resources/images/sample.jpg"></div>
+                    <span style="margin-left: 10px;" id="name">나이키님</span>
+                </div>
+                    <button type="button" class="logout">
+                        <a href="#">로그아웃</a>
+                    </button>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- detail-wrap -->
+        <div class="detail-wrap">
+            <div class="detail-layout">
+                <div class="img-wrap">
+                    <img src="resources/images/sample.jpg" alt="이미지">
+                </div>
+                <!-- right-part -->
+                <div class="right-part">
+                    <div class="group-top">
+                        <div class="profile">
+                            <img src="resources/images/sample.jpg" alt="프로필이미지">
+                        </div>
+                        <strong>nike</strong>
+                        <a class="dot"><img src="resources/images/dot.png"></a>
+                    </div>
+                    <ul class="group-bottom">
+                        <li>
+                            <div class="profile">
+                                <img src="resources/images/sample.jpg" alt="프로필이미지">
+                            </div>
+                            <div class="txt">
+                                <strong>nike</strong>
+                                나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키
+                                <div class="comment-wrap">
+                                    <button type="button" class="comment">답글달기</button>
+                                    <button type="button" class="btn-del-comment">
+                                        <img src="resources/images/dot.png" alt="삭제버튼">
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-reply">답글 보기(1개)</button>
+                            <!-- reply -->
+                            <ul class="reply">
+                                <li>
+                                    <div class="profile">
+                                        <img src="resources/images/sample.jpg" alt="프로필이미지">
+                                    </div>
+                                    <div class="txt">
+                                        <strong>nike</strong>
+                                        나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키
+                                        <div class="comment-wrap">
+                                            <button type="button" class="comment">답글달기</button>
+                                            <button type="button" class="btn-del-comment">
+                                                <img src="resources/images/dot.png" alt="삭제버튼">
+                                            </button>
+                                        </div>
+                                </li>
+                                <li>
+                                    <div class="profile">
+                                        <img src="resources/images/sample.jpg" alt="프로필이미지">
+                                    </div>
+                                    <div class="txt">
+                                        <strong>nike</strong>
+                                        나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키나이키
+                                        <div class="comment-wrap">
+                                            <button type="button" class="comment">답글달기</button>
+                                            <button type="button" class="btn-del-comment">
+                                                <img src="resources/images/dot.png" alt="삭제버튼">
+                                            </button>
+                                        </div>
+                                </li>
+                            </ul>
+                            <!-- //reply -->
+                        </li>
+                    </ul>
+                    <!-- group-bottm -->
+
+                    <!-- bottum-part -->
+                    <div class="bottom-part">
+                        <!-- like-wrap -->
+                        <button type="button" class="btn-like">
+                            <i class="ico-like"></i>
+                            좋아요
+                            <strong>1개</strong>
+                        </button>
+                        <!-- //like-wrap -->
+                        <div class="form-wrap">
+                            <div class="img2"><img src="resources/images/comment.png" alt="이모티콘"></div>
+                            <textarea class="text-box" placeholder="댓글 달기..."></textarea>
+                            <button type="button" class="form-button">게시</button>
+                        </div>
+                        <!-- //form-wrap -->
+                    </div>
+                    <!-- //bottom-wrap -->
+                </div>
+                <!-- //right-part -->
+            </div>
+            <!-- //detail-layout -->
+        </div>
+        <!-- //detail-wrap -->
+
+        <!-- modal-del -->
+        <div id="modalDel"class="modal-del">
+            <div class="inner">
+                <a href="#" class="btn-remove" style="color: red;">삭제</a>
+                <a href="edit.html" class="btn-edit">수정</a>
+                <a href="#" class="btn-cancel">취소</a>
+            </div>
+        </div>
+        <div id="modalDelComment" class="modal-del">
+            <div class="inner">
+                <a href="#" class="btn-remove" style="color: red;">삭제</a>
+                <a href="#" class="btn-cancel">취소</a>
+            </div>
+        </div>
+        <div class="mask"></div>
+        <!-- //modal-del -->
+        <footer>@2022 Instargram from Meta</footer>
+        </div>
+        <!-- //wrap -->
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)file:///C:/Users/USER/Downloads/index.html -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+
+    <link rel="stylesheet" href="resources/css/fonts.css">
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/common.css">
+    <link rel="stylesheet" href="resources/css/main.css">
+
+    <script src="resources/js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#name').click(function(){
+                $('.logout').toggle();
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <!-- wrap -->
+    <div class="wrap">
+        <!-- header -->
+        <header>
+            <div class="layout">
+                <img src="resources/images/logo.png">
+
+                <div class="right-group">
+                    <a href="create.html"><img src="resources/images/ico-link.png" style="margin-right: 15px;"></a>
+                    <div class="profile-img"><img src="resources/images/sample.jpg"></div>
+                    <span style="margin-left: 10px;" id="name">나이키님</span>
+                </div>
+                    <button type="button" class="logout">
+                        <a href="#">로그아웃</a>
+                    </button>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- edit-wrap-->
+        <div class="edit-wrap">
+            <div class="layout">
+                <!-- profile-wrap -->
+                <div class="profile-wrap">
+                    <div class="profile-img2"><img src="resources/images/sample.jpg"></div>
+                    <span>nike</span>
+                </div>
+                <!-- //profile-wrap -->
+                <!-- textarea-wrap -->
+                <div class="create-textarea-wrap">
+                    <textarea class="textarea" placeholder="문구 입력..."></textarea>
+                </div>
+                <div class="bottom-box">
+                    <label for="input-file" class="input-file-label">
+                        <img src="resources/images/fild-upload.png" alt="파일업로드">
+                    </label>
+                    <input type="file" id="input-file">
+                    <button type="button" class="bottomBtn cancle">취소</button>
+                    <button type="button" class="bottomBtn create">등록</button>
+                </div>
+            </div>
+        </div>
+        <!-- //edit-wrap-->
+        <footer>@2022 Instagram from Meta</footer>
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>
